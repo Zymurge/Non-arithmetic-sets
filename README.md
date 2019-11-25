@@ -16,5 +16,6 @@ solution is in Python.
 Potential variant problems of increasing difficulty:
 - Given an array of unique numbers, test whether there are 3 or more that form an arithmetic sequence
 - Starting with 1, find the lowest possible value for the nth integer in a non-arithmetic set
+- Find a set of 9 in the numbers from 1 to 20 (*the problem defined in the book*)
 - Solve for dynamic mixes of number integers to form a sequence, total number to solve, find the most
   possible in a set ranging from x to y, etc.
