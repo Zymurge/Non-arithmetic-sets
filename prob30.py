@@ -19,7 +19,7 @@ def has_sequence(numbers):
     return False
 
 """
-    Recursive function to find the n+1th integer from a passed in set of n
+    Find the n+1th integer from a passed in set of n
     Will incrementally check from the specified start point and up to 20
     returns the first match or 0 no valid options found
 """
@@ -33,7 +33,7 @@ def find_next(existing, start):
             return i
     return 0
 
-def run():
+def solve_nested():
     for i1 in range(1, 13):
         for i2 in range(i1+1, 14):
             map = [i1, i2]
@@ -82,6 +82,8 @@ def run():
             del map[2]
 
     return 0
-            
+
+def run():
+    return solve_nested()         
 
 

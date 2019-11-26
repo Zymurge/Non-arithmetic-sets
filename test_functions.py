@@ -39,9 +39,11 @@ class TestFindNext(unittest.TestCase):
 
 class TestRun(unittest.TestCase):
     def test_it(self):
+        expected = [1, 2, 6, 7, 9, 14, 15, 18, 20]
         result = run()
-        print("Result: " + str(result))
+        #print("Result: " + str(result))
         self.assertNotEqual(result, 0)
+        self.assertEqual(result, expected)
 
 
 if __name__ == '__main__':
