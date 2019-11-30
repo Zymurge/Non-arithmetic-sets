@@ -36,50 +36,50 @@ def find_next(existing, start):
 def solve_nested():
     for i1 in range(1, 13):
         for i2 in range(i1+1, 14):
-            map = [i1, i2]
-            i3 = find_next(map, i2 + 1)
-            map.append(i3)
+            target = [i1, i2]
+            i3 = find_next(target, i2 + 1)
+            target.append(i3)
             while i3 != 0 and i3 < 15:
-                i4 = find_next(map, i3 + 1)
-                map.append(i4)
+                i4 = find_next(target, i3 + 1)
+                target.append(i4)
                 while i4 != 0 and i4 < 16:
-                    i5 = find_next(map, i4 + 1)
-                    map.append(i5)
+                    i5 = find_next(target, i4 + 1)
+                    target.append(i5)
                     while i5 != 0 and i5 < 17:
-                        i6 = find_next(map, i5 + 1)
-                        map.append(i6)
+                        i6 = find_next(target, i5 + 1)
+                        target.append(i6)
                         while i6 != 0 and i6 < 18:
-                            i7 = find_next(map, i6 + 1)
-                            map.append(i7)
+                            i7 = find_next(target, i6 + 1)
+                            target.append(i7)
                             while i7 != 0 and i7 < 19:
-                                i8 = find_next(map, i7 + 1)
-                                map.append(i8)
+                                i8 = find_next(target, i7 + 1)
+                                target.append(i8)
                                 while i8 != 0 and i8 < 20:
 
-                                    i9 = find_next(map, i8 + 1)
+                                    i9 = find_next(target, i8 + 1)
                                     if i9 == 0:
-                                        i8 = find_next(map, i8 + 1)
+                                        i8 = find_next(target, i8 + 1)
                                     else:
-                                        map.append(i9)
-                                        return map
+                                        target.append(i9)
+                                        return target
                                 # end inner
-                                del map[7]                                            
-                                i7 = find_next(map, i7+1)           
+                                del target[7]                                            
+                                i7 = find_next(target, i7+1)           
                             # end inner
-                            del map[6]                                            
-                            i6 = find_next(map, i6+1)           
+                            del target[6]                                            
+                            i6 = find_next(target, i6+1)           
                         # end inner
-                        del map[5]                                            
-                        i5 = find_next(map, i5+1)           
+                        del target[5]                                            
+                        i5 = find_next(target, i5+1)           
                     # end inner
-                    del map[4]        
-                    i4 = find_next(map, i4+1)
+                    del target[4]        
+                    i4 = find_next(target, i4+1)
                 # end inner
-                del map[3]
-                i3 = find_next(map, i3+1)
-                map[2] = i3
+                del target[3]
+                i3 = find_next(target, i3+1)
+                target[2] = i3
             # end inner
-            del map[2]
+            del target[2]
 
     return 0
 
