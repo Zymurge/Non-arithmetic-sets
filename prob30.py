@@ -27,7 +27,7 @@ def find_next(existing, start):
     # Extend list to hold the candidate integer
     mapped = existing.copy()
     mapped.append(0)
-    for i in range(start,21):
+    for i in list(range(start,21)):
         mapped[len(mapped)-1] = i
         if not has_sequence(mapped):
             return i
