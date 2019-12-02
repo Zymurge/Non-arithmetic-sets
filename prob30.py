@@ -68,62 +68,8 @@ def find_next_recursive(target):
     # fall through fail
     return 0
 
-def solve_recursive():
+def run():
     target = [0] * 9
     return find_next_recursive(target) 
-
-
-def solve_nested():
-    for i1 in range(1, 13):
-        for i2 in range(i1+1, 14):
-            target = [i1, i2]
-            i3 = find_next(target, i2 + 1)
-            target.append(i3)
-            while i3 != 0 and i3 < 15:
-                i4 = find_next(target, i3 + 1)
-                target.append(i4)
-                while i4 != 0 and i4 < 16:
-                    i5 = find_next(target, i4 + 1)
-                    target.append(i5)
-                    while i5 != 0 and i5 < 17:
-                        i6 = find_next(target, i5 + 1)
-                        target.append(i6)
-                        while i6 != 0 and i6 < 18:
-                            i7 = find_next(target, i6 + 1)
-                            target.append(i7)
-                            while i7 != 0 and i7 < 19:
-                                i8 = find_next(target, i7 + 1)
-                                target.append(i8)
-                                while i8 != 0 and i8 < 20:
-
-                                    i9 = find_next(target, i8 + 1)
-                                    if i9 == 0:
-                                        i8 = find_next(target, i8 + 1)
-                                    else:
-                                        target.append(i9)
-                                        return target
-                                # end inner
-                                del target[7]                                            
-                                i7 = find_next(target, i7+1)           
-                            # end inner
-                            del target[6]                                            
-                            i6 = find_next(target, i6+1)           
-                        # end inner
-                        del target[5]                                            
-                        i5 = find_next(target, i5+1)           
-                    # end inner
-                    del target[4]        
-                    i4 = find_next(target, i4+1)
-                # end inner
-                del target[3]
-                i3 = find_next(target, i3+1)
-                target[2] = i3
-            # end inner
-            del target[2]
-
-    return 0
-
-def run():
-    return solve_recursive()         
 
 
